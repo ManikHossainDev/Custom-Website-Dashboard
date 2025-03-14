@@ -13,14 +13,14 @@ const CustomInput = ({ icon: Icon, label, placeholder, className, type = "text",
           <Input.Password
             prefix={Icon && <Icon className="text-gray-500 text-xl " />} // Dynamic icon
             placeholder={placeholder || "Enter password"} // Dynamic placeholder
-            className={`w-full px-4 py-2 text-[16px]  text-gray-700 rounded-lg  bg-[#F7F7F7] border-none ${className}`}
+            className={`w-full px-4 py-2 text-[16px]  text-gray-700 rounded-lg  bg-[#F7F7F7]  ${className}`}
             {...rest} // Additional props
           />
         ) : (
           <Input
             prefix={Icon && <Icon className="text-gray-500 text-xl " />} // Dynamic icon
             placeholder={placeholder || "Enter value"} // Dynamic placeholder
-            className={`w-full px-4 py-2 text-[16px]  text-gray-700 rounded-lg bg-[#F7F7F7] border-none ${className}`}
+            className={`w-full px-4 py-2 text-[16px]  text-gray-700 rounded-lg bg-[#F7F7F7]  ${className}`}
             type={type} // Default input type
             {...rest} // Additional props
           />

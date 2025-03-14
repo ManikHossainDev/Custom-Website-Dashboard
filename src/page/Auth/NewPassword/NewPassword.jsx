@@ -1,7 +1,7 @@
 
 import LogoImage from "../../../assets/auth/Logo.png";
-import { Link, useNavigate, useParams, } from "react-router-dom";
-import { IoIosArrowBack } from "react-icons/io";
+import { useNavigate, useParams, } from "react-router-dom";
+
 import { Form } from "antd"; // Import Ant Design Form
 import CustomInput from "../../../utils/CustomInput";
 import CustomButton from "../../../utils/CustomButton";
@@ -34,20 +34,17 @@ const NewPassword = () => {
   };
 
   return (
-    <div className="bg-[#121212]">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#d0c7f9] via-[#f5f4fd] to-[#d0c7f9]">
       <div className="w-full md:max-w-xl mx-auto h-full md:h-screen  place-content-center px-5 py-10 gap-8 ">
-      <div className="mt-16 md:mt-[115px] bg-[#6666661A] p-5 rounded-md">
+      <div className="mt-5  px-8  p-5 rounded-md border-2 border-[#5454AA]">
         <img
             src={LogoImage}
-            className="w-[170px] h-[70px]  mb-3 "
+            className="w-[100px] h-[70px]  mb-3  mx-auto"
             alt="Logo"
           />
-        <div className="mb-5 text-white">
+        <div className="mb-5 ">
           <h1 className="font-semibold text-xl flex items-center gap-2">
-            <Link to="/auth/otp">
-              <IoIosArrowBack />
-            </Link>
-            Update Password
+            Reset Password
           </h1>
         </div>
 
@@ -59,7 +56,7 @@ const NewPassword = () => {
         >
           {/* CustomInput wrapped inside Form.Item for validation */}
           <Form.Item
-          label={<span style={{ color: "#FFFFFF" }}>New Password</span>}
+          label="New Password"
             name="password"
             rules={[
               {
@@ -72,7 +69,7 @@ const NewPassword = () => {
           </Form.Item>
 
           <Form.Item
-          label={<span style={{ color: "#FFFFFF" }}>Confirm Password</span>}
+          label="Confirm Password"
             name="confirmPassword"
             rules={[
               {

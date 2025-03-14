@@ -1,7 +1,6 @@
 
 import LogoImage from "../../../assets/auth/Logo.png";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { IoIosArrowBack } from "react-icons/io";
+import {  useNavigate, useParams } from "react-router-dom";
 import OTPInput from "react-otp-input";
 import { useState } from "react";
 import CustomButton from "../../../utils/CustomButton";
@@ -54,23 +53,20 @@ const Otp = () => {
     }
   };
   return (
-    <div className="bg-[#121212]">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#d0c7f9] via-[#f5f4fd] to-[#d0c7f9]">
       <div className="w-full md:max-w-xl mx-auto h-full md:h-screen  place-content-center  px-5 py-10 gap-8">
       
-      <div className="mt-16 md:mt-[115px] bg-[#6666661A] p-5 rounded-md">
+      <div className="mt-5  px-8  p-5 rounded-md border-2 border-[#5454AA]">
         <img
             src={LogoImage}
-            className="w-[170px] h-[70px]  mb-3 "
+            className="w-[100px] h-[70px]  mb-3  mx-auto"
             alt="Logo"
           />
         <div className="mb-5 space-y-5">
-          <h1 className="font-semibold text-xl flex items-center gap-2 text-white">
-            <Link to="/auth/forget-password">
-              <IoIosArrowBack />
-            </Link>
-            Verify OTP
+          <h1 className="font-semibold text-xl flex items-center gap-2 ">
+            OTP Verification
           </h1>
-          <h1 className="text-white">Well send a verification code to your email. Check your inbox and enter the code here.</h1>
+          <h1 className="">Check your email to see the verification code</h1>
         </div>
         <OTPInput
           value={otp}
@@ -96,8 +92,8 @@ const Otp = () => {
           </CustomButton>
         </div>
         <div className="flex justify-between items-center my-4">
-          <h1 className="text-white">Didn’t receive code?</h1>
-          <button onClick={handleResendPassword} className="text-[#1397D5]">
+          <h1 className="">Didn’t receive code?</h1>
+          <button onClick={handleResendPassword} className="text-[#5454AA]">
             Resend
           </button>
         </div>

@@ -42,18 +42,18 @@ const SignIn = () => {
   };
 
   return (
-    <div className="bg-[#121212]">
-      <div className="w-full md:max-w-xl mx-auto h-full md:h-screen  place-content-center px-5 py-10 ">
-      <div className="mt-5 md:mt-20 px-8 bg-[#6666661A] p-5 rounded-md">
-        <div className="mb-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#d0c7f9] via-[#f5f4fd] to-[#d0c7f9]">
+      <div className="w-full md:max-w-xl mx-auto h-full md:h-screen  place-content-center px-5 ">
+      <div className="mt-5  px-8  p-5 rounded-md border-2 border-[#5454AA]">
+        <div className="mb-3">
           <img
             src={LogoImage}
-            className="w-[170px] h-[70px]  mb-3 "
+            className="w-[100px] h-[70px]  mx-auto mb-3"
             alt="Logo"
           />
-          <h1 className="font-semibold text-3xl text-white">Hello, Welcome!</h1>
-          <p className="text-white">
-            Please Enter Your Details Below to Continue
+          <h1 className="font-semibold text-xl ">Welcome Back</h1>
+          <p >
+          Please Enter Your Details Below to Continue
           </p>
         </div>
         <Form
@@ -65,7 +65,7 @@ const SignIn = () => {
           }}
         >
           <Form.Item
-            label={<span style={{ color: "#FFFFFF" }}>Email</span>}
+            label="Email"
             name="email"
             rules={[
               { required: true, message: "Please input your email!" },
@@ -80,7 +80,7 @@ const SignIn = () => {
           </Form.Item>
 
           <Form.Item
-            label={<span style={{ color: "#FFFFFF" }}>Password</span>}
+            label="Password"
             name="password"
             rules={[{ required: true, message: "Please input your password!" }]}
           >
@@ -94,9 +94,9 @@ const SignIn = () => {
 
           <div className="flex justify-between items-center">
             <Form.Item name="remember" valuePropName="checked" noStyle>
-              <Checkbox className="text-white">Remember me</Checkbox>
+              <Checkbox className="">Remember me</Checkbox>
             </Form.Item>
-            <Link to="/auth/forget-password" className="text-[#1397D5]">
+            <Link to="/auth/forget-password" className="text-[#5454AA]">
               Forgot password?
             </Link>
           </div>
