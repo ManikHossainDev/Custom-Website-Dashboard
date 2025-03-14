@@ -36,3 +36,8 @@
 .custom-modal .ant-modal-close-x {
   color: #ffffff !important;
 }
+
+
+.custom-table .ant-table-thead > tr > th {
+  border: none !important;  /* Removes bottom border from header cells */
+}

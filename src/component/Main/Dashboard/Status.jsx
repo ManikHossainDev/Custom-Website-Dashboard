@@ -1,52 +1,53 @@
-import { FaDatabase } from "react-icons/fa";
-import { PiCurrencyCircleDollar, PiUsers, PiUsersThreeFill } from "react-icons/pi";
-// import { useGetDashboardStatusQuery } from "../../../redux/features/dashboard/dashboardApi";
+import { FaFileAlt } from "react-icons/fa";
+import { FaArrowTrendUp } from "react-icons/fa6";
+
 const Status = () => {
-  // const {} = useGetDashboardStatusQuery();
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <div className="flex justify-between items-center p-5 rounded-lg bg-[#FF8B0F]">
-        <div className="size-20 p-3 flex justify-center items-center rounded-full bg-primary text-white border-white border-4 ">
-          <PiUsersThreeFill className="size-8" />
+    <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 py-5 w-full">
+      {/* Card 1 */}
+      <div className="w-full bg-gradient-to-r from-[#00007F4C] to-[#E6E6F27A] p-4 rounded-lg shadow-md space-x-4 border-2 border-[#333399] mb-4 md:mb-0">
+        <div className="flex items-center space-x-5">
+          <div className="flex justify-center items-center bg-[#333399] w-[52px] h-[52px] p-3 rounded-md text-white">
+            <FaFileAlt size={30} />
+          </div>
+          <h3 className="text-3xl font-semibold">Total User</h3>
         </div>
-        <div className="space-y-2">
-          <h1 className="text-center text-4xl font-semibold text-[#222222]">
-          120
-          </h1>
-          <h1>Total Customer</h1>
-        </div>
-      </div>
-      <div className="flex justify-between items-center p-5 rounded-lg bg-[#FF8B0F]">
-        <div className="size-20 p-3 flex justify-center items-center rounded-full bg-primary text-white border-white border-4 ">
-          <PiCurrencyCircleDollar className="size-8" />
-        </div>
-        <div className="space-y-2">
-          <h1 className="text-center text-4xl font-semibold text-[#222222]">
-          $2.5k
-          </h1>
-          <h1>Total Income</h1>
+        <div className="flex items-center space-x-5 mt-5">
+          <p className="text-5xl font-bold">369</p>
+          <p className="text-xl text-gray-600 flex items-center">
+            <span className="ml-2 mr-2 text-green-500 bg-[#2dbe7133] p-2 rounded-md flex items-center">
+              <FaArrowTrendUp className="mr-2" /> 20%
+            </span>
+            Last month total 1050
+          </p>
         </div>
       </div>
-      <div className="flex justify-between items-center p-5 rounded-lg bg-[#FF8B0F]">
-        <div className="size-20 p-3 flex justify-center items-center rounded-full bg-primary text-white border-white border-4 ">
-        <FaDatabase className="size-8" /> 
+
+      {/* Card 2 */}
+      <div className="w-full bg-gradient-to-r from-[#00007F4C] to-[#E6E6F27A] p-4 rounded-lg shadow-md border-2 border-[#333399] mb-4 md:mb-0">
+        <div className="flex items-center space-x-5">
+          <div className="flex justify-center items-center bg-[#333399] w-[52px] h-[52px] p-3 rounded-md text-white">
+            <FaFileAlt size={30} />
+          </div>
+          <h3 className="text-3xl font-semibold">Total User</h3>
         </div>
-        <div className="space-y-2">
-          <h1 className="text-center text-4xl font-semibold text-[#222222]">
-            1200
-          </h1>
-          <h1>Total Items</h1>
+        <div className="flex items-center space-x-5 mt-5">
+          <p className="text-5xl font-bold">369</p>
+          <p className="text-xl text-gray-600">Last month total 1050</p>
         </div>
       </div>
-      <div className="flex justify-between items-center p-5 rounded-lg bg-[#FF8B0F]">
-        <div className="size-20 p-3 flex justify-center items-center rounded-full bg-primary text-white border-white border-4 ">
-        <PiUsers className="size-8" />
+
+      {/* Card 3 */}
+      <div className="w-full bg-gradient-to-r from-[#00007F4C] to-[#E6E6F27A] p-4 rounded-lg shadow-md border-2 border-[#333399]">
+        <div className="flex items-center space-x-5">
+          <div className="flex justify-center items-center bg-[#333399] w-[52px] h-[52px] p-3 rounded-md text-white">
+            <FaFileAlt size={30} />
+          </div>
+          <h3 className="text-3xl font-semibold">Total User</h3>
         </div>
-        <div className="space-y-2">
-          <h1 className="text-center text-4xl font-semibold text-[#222222]">
-            1200
-          </h1>
-          <h1>Total Rental</h1>
+        <div className="flex items-center space-x-5 mt-5">
+          <p className="text-5xl font-bold">369</p>
+          <p className="text-xl text-gray-600">Last month total 1050</p>
         </div>
       </div>
     </div>
